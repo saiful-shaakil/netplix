@@ -13,7 +13,9 @@ function Banner({ netflixOriginals }: Props) {
   const [movie, setMovie] = useState<Movie | null>(null);
 
   useEffect(() => {
-    setMovie(netflixOriginals[Math.floor(Math.random() * 20)]);
+    if (netflixOriginals) {
+      setMovie(netflixOriginals[Math.floor(Math.random() * 20)]);
+    }
   }, [netflixOriginals]);
 
   return (
