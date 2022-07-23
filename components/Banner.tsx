@@ -25,6 +25,8 @@ function Banner({ netflixOriginals }: Props) {
           layout="fill"
           src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
           objectFit="cover"
+          loading="lazy"
+          alt="Banner"
         />
       </div>
 
