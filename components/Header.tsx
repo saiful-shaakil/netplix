@@ -12,10 +12,12 @@ function Header() {
       } else {
         setIsScrolling(false);
       }
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
@@ -29,7 +31,7 @@ function Header() {
           alt="Netflix Profile"
           className="cursor-pointer object-contain"
         />
-        <ul className="hidden space-x-4 md:flex">
+        <ul className="hidden  space-x-4 md:flex">
           <li className="linkOfHeader">Home</li>
           <li className="linkOfHeader">TV Shows</li>
           <li className="linkOfHeader">Movies</li>
